@@ -1,0 +1,25 @@
+<!-- <h1 style="font-size: 250%;" [innerHTML]="title">Loading Title...</h1>
+<div [innerHTML]="content">Loading Content...</div> -->
+
+<h2>Dashboard</h2>
+
+<ul class="dash">
+ <li  *ngFor =" let news of articles">
+	<div class="card">
+		<div class="img" [ngStyle]="{'background-image': 'url('+news.urlToImage+')'}" ></div>
+		
+		<h2 class="title">{{news.title}}</h2>
+		<span class=" author text-right">{{news.author}}</span>
+		<p class="news">{{news.description}}</p>
+		<p class="date">{{news.publishedAt}}</p>
+		<a href="{{news.url}}">More</a>
+	</div>
+	<!-- <div [hidden]="!loading" class="loader">
+      <h2>Loading...</h2>
+     <div class="progress">
+		  <div class="progress-bar bg-success" style="width:80%"></div>
+		</div>
+    </div> -->
+ </li>
+</ul>
+
